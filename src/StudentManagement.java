@@ -5,6 +5,7 @@ public class StudentManagement {
     private static ArrayList<Student> studentList = new ArrayList<>();  // List to store student objects
     private static int totalStudents = 0;  // Counter for the total number of students
 
+    // Method to check if a student ID already exists
     public static boolean studentIdExists(int id) {
         for (Student student : studentList) {
             if (student.getId() == id) {
@@ -24,6 +25,7 @@ public class StudentManagement {
         }
     }
 
+    // Method to add a new student
     public static void addNewStudent(Scanner input) {
         System.out.print("Enter student name: ");
         String name = input.nextLine();
@@ -52,6 +54,7 @@ public class StudentManagement {
         System.out.println("Student added successfully.");
     }
 
+    // Method to delete a student by ID
     public static void deleteStudent(Scanner input) {
         System.out.print("Enter student ID to delete: ");
         int id = getIntInput(input);
@@ -67,6 +70,7 @@ public class StudentManagement {
         System.out.println("Student ID not found. Deletion failed.");
     }
 
+    // Method to update student information by ID
     public static void updateStudent(Scanner input) {
         System.out.print("Enter student ID to update: ");
         int id = getIntInput(input);
@@ -125,6 +129,7 @@ public class StudentManagement {
         System.out.println("Student ID not found.");
     }
 
+    // Method to view a single student's details
     public static void viewStudent(Scanner input) {
         System.out.print("Enter student ID to view details: ");
         int id = getIntInput(input);
@@ -142,6 +147,7 @@ public class StudentManagement {
         System.out.println("Student ID not found.");
     }
 
+    // Method to view all students' details
     public static void viewAllStudents() {
         if (studentList.isEmpty()) {
             System.out.println("No students found. Please add students first.");

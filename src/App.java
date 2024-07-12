@@ -22,7 +22,6 @@ public class App {
                 System.out.print("Enter your choice: "); // The print() method does not move the cursor to a new line0000.
 
                 // Get the user's choice
-                // nextInt() reads a int value from the user
                 choice = StudentManagement.getIntInput(input);
 
                 // Switch statements to perform actions based on the user's choice
@@ -43,7 +42,6 @@ public class App {
                         StudentManagement.viewAllStudents();
                         break;
                     case 6:
-                        // Exit the program
                         System.out.println("Exiting...");
                         break;
                     default:
