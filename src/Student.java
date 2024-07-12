@@ -1,15 +1,15 @@
 public class Student {
     private int id;
-    private String name;
     private int age;
-    private double grades;
+    private String name;
+    private String grade; // For example, A+/A/A-
 
     // Create a class constructor for the Student class
-    public Student(int id, String name, int age, double grades) {
+    public Student(int id, int age, String name, String grade) {
         this.id = id;
-        this.name = name;
         this.age = age;
-        this.grades = grades;
+        this.name = name;
+        this.grade = grade;
     }
 
     // Getter and setter methods
@@ -37,11 +37,16 @@ public class Student {
         this.age = age;
     }
 
-    public double getGrades() {
-        return grades;
+    public String getGrade() {
+        return grade;
     }
 
-    public void setGrades(double grades) {
-        this.grades = grades;
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Name: " + name + ", Age: " + age + ", Grade: " + grade;
     }
 }

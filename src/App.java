@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class App {
-    // Create an object of input
-    Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);  // Create a Scanner object
 
     public static void main(String[] args) {
         App system = new App();
@@ -13,10 +12,9 @@ public class App {
         try {
             int choice;
             do {
-                // Displaying the main menu
-                System.out.println("\n===== Student Record Management System =====");
+                System.out.println("\nWelcome to the Student Record Management System!\nHere are the options:");
                 System.out.println("1. Add New Student");
-                System.out.println("2. Delete A Student");
+                System.out.println("2. Delete Student");
                 System.out.println("3. Update Student Information");
                 System.out.println("4. View Student Details");
                 System.out.println("5. View All Students");
@@ -25,7 +23,7 @@ public class App {
 
                 // Get the user's choice
                 // nextInt() reads a int value from the user
-                choice = input.nextInt();
+                choice = StudentManagement.getIntInput(input);
 
                 // Switch statements to perform actions based on the user's choice
                 switch (choice) {
@@ -36,16 +34,17 @@ public class App {
                         StudentManagement.deleteStudent(input);
                         break;
                     case 3:
-                        StudentManagement.updateStudentInformation(input);
+                        StudentManagement.updateStudent(input);
                         break;
                     case 4:
-                        StudentManagement.viewStudentDetails(input);
+                        StudentManagement.viewStudent(input);
                         break;
                     case 5:
                         StudentManagement.viewAllStudents();
                         break;
                     case 6:
                         // Exit the program
+                        System.out.println("Exiting...");
                         break;
                     default:
                         // Handle invalid input and display appropriate error messages
